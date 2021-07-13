@@ -32,8 +32,7 @@ class TestCase_02(unittest.TestCase):
 
         item_price_name_list = self.search_page.get_names_prices()
 
-        if item_price_name_list != []:
-            assert ((item_price_name_list[0][1]>float(filter_left_range)) and (item_price_name_list[-1][1]<float(filter_right_range))), "Search result is not in range"
+        assert ((item_price_name_list[0][1]>float(filter_left_range)) and (item_price_name_list[-1][1]<float(filter_right_range))), "Search result is not in range"
         assert item_price_name_list == item_price_name_list_ck, "Search results is not match the cheklist"
 
 

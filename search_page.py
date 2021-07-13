@@ -55,9 +55,6 @@ class SearchPage(WebPage):
         ActionChains(self.driver).drag_and_drop_by_offset(self.get_left_range_runner(), (self.get_slide_width()//100)*percent, 0).perform()
         self.find_element_NOT(PageSeacrсhLocators.LOCATOR_GRID_LOADING)
 
-    def get_product_grid_loading(self):
-        return self.find_element(PageSeacrсhLocators.LOCATOR_GRID_LOADING)
-
     def input_search_word(self, search_request):
         return self.find_element(PageSeacrсhLocators.LOCATOR_KEYWORD_INPUT).send_keys(search_request)
 
